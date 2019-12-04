@@ -7,6 +7,14 @@
 import math
 
 
+def calculate(semicuricular, side):
+    if semicuricular > 0 and side > 0:
+        result = math.pi * (semicuricular ** 2) + 2 * semicuricular * side
+    else:
+        result = "-1"
+    return result
+
+
 def main():
     # This function calculates the volume of a cylinder
 
@@ -20,12 +28,9 @@ def main():
     except(Exception):
         print("Wrong input!!!")
         return
-    # Process
-    if semicuricular > 0 and side > 0:
-        result = math.pi * (semicuricular ** 2) + 2 * semicuricular * side
-    else:
-        print("The number must be more then 0!")
-        return
+
+    # call other function
+    result = calculate(semicuricular, side)
 
     # Output
     print("The area of the stadium is approximately {0:.2f}m^2".format(result))
