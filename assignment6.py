@@ -33,6 +33,8 @@ def main():
     result = calculate(semicuricular, side)
 
     # Output
+    if result == "-1":
+        print("Number must be more than 0!")
     print("The area of the stadium is approximately {0:.2f}m^2".format(result))
 
 
